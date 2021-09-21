@@ -1,0 +1,16 @@
+{
+  "name": "@getfeedback/lightningjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:GetFeedback/lightningjs.git",
+  "private": true,
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "terser": "^5.8.0"
+  },
+  "scripts": {
+    "build": "run-p build:*",
+    "build:embed": "terser --compress --mangle --output lightningjs-embed.min.js -- lightningjs-embed.js",
+    "build:bootstrap": "terser --compress --mangle --output lightningjs-bootstrap.min.js -- lightningjs-bootstrap.js"
+  }
+}

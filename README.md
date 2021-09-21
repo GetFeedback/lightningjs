@@ -183,11 +183,11 @@ The development cycle should be pretty straightforward:
 1. Edit `lightningjs-embed.js` and `lightningjs-bootstrap.js` directly
 2. Add your test cases in `test/test.js`
   - *you might need to add methods to the test library in `test/testlib.js`*
-3. Run the development server by executing `bin/serve` and visiting
+3. Rebuild the components, by executing `yarn build` (you need to install the dependencies before -> `yarn install`). Test rely on the minified version
+4. Run the development server by executing `bin/serve` and visiting
    [http://localhost:1167](http://localhost:1167) in your browser
-4. Click on the links for testing and benchmarking pages to see the effects of your changes
+5. Click on the links for testing and benchmarking pages to see the effects of your changes
   - *don't forget to check multiple browsers, especially older ones like IE6*
-5. Rebuild the components before committing your patches, by executing `bin/build`
 
 Feel free to fork, make changes, and send us a pull request...you know the drill.
 

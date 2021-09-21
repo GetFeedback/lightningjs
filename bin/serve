@@ -30,14 +30,12 @@ class DevelopmentServerRoutes(object):
 
         # get a refreshable handle on the embed code
         self.__lightningjs_embed_file = RefreshableFile(
-            path=os.path.join(os.path.dirname(__file__), '..', 'lightningjs-embed.js'),
-            read=minify_with_closure,
+            path=os.path.join(os.path.dirname(__file__), '..', 'lightningjs-embed.min.js'),
             )
 
         # get a refreshable handle on the bootstrap code
         self.__lightningjs_bootstrap_file = RefreshableFile(
-            path=os.path.join(os.path.dirname(__file__), '..', 'lightningjs-bootstrap.js'),
-            read=minify_with_closure,
+            path=os.path.join(os.path.dirname(__file__), '..', 'lightningjs-bootstrap.min.js'),
             )
         self.__uncompressed_lightningjs_bootstrap_file = RefreshableFile(
             path=os.path.join(os.path.dirname(__file__), '..', 'lightningjs-bootstrap.js'),
